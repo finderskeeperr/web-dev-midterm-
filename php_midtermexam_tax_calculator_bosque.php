@@ -1,77 +1,142 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head>
-        <title>Tax Calculator - PHP</title>
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-        <link rel="stylesheet" href="style.css">
-        <style>
-            body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
+<?php
+class Salary{
+    public $First_name;
+    public $last_name;
+    public $salary;
+    public $getWithHoldingTax;
+    public $display;
 
-.content {
-    border: 2px solid rgb(32, 33, 41);
-    width: 230px;
-    padding: 10px 20px;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+    //methods
+    function set_First_name($First_name){
+        $this->First_name = $First_name;
+    }
+    function get_First_name() {
+        return $this->First_name;
+    }
+    function set_last_name($Last_name){
+        $this->last_name = $Last_name;
+    }
+    function get_last_name() {
+        return $this->last_name;
+    }
+    
 
-.content h1 {
-    font-size: 28px;
-    background-color: #800000;
-    color: #fff;
-    padding: 10px 10px;
-    width: 90%;
-    text-align: center;
-}
 
-input#monetaryAmmount,
-input#taxPercentage {
-    width: 90%;
-    text-align: right;
-    padding: 5px;
-    margin: 5px 0;
 }
+$salaryy =  new Salary();
+$salaryy->set_First_name('Lorgem');
+$salaryy->set_last_name('Bosque');
+echo "Name:" .$salaryy->get_First_name();
+echo "<br>";
+echo "Lastname:" .$salaryy->get_last_name();
 
-#calculateBtn {
-    width: 100px;
-    padding: 5px;
-    margin: 5px 0;
-    text-align: center;
-}
 
-#summary {
-    background-color: #ccc;
-    width: 95%;
-    padding: 2px;
-    margin: 5px 0;
-}
 
-#summary p {
-    padding: 1px;
-    margin: 5px 5px;
-}
-        </style>
-    </head>
-<body>
 
-    <?php
-        // Check if the "Calculate" button was pressed, then get the data from inputs
-        if (isset($_POST['monetaryAmount']) && isset($_POST['taxPercentage'])) {
-            $monetaryAmmount = (float) $_POST['monetaryAmount'];
-            $taxPercentage = (float) $_POST['taxPercentage'];
-        } else {
-            $monetaryAmmount = 0;
-            $taxPercentage = 0;
-        }
-        // Make the calculations
-        $taxAmount = round(($monetaryAmmount * $taxPercentage) / 100, 2);
-        $finalAmount = round($monetaryAmmount - $taxAmount, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <!DOCTYPE html> 
+// <html lang="en"> 
+//     <head>
+//         <title>Tax Calculator - PHP</title>
+//         <meta charset="utf-8"> 
+//         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+//         <link rel="stylesheet" href="style.css">
+//         <style>
+//             body {
+//     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+// }
+
+// .content {
+//     border: 2px solid rgb(32, 33, 41);
+//     width: 230px;
+//     padding: 10px 20px;
+//     margin: auto;
+//     margin-top: 50px;
+//     margin-bottom: 50px;
+// }
+
+// .content h1 {
+//     font-size: 28px;
+//     background-color: #800000;
+//     color: #fff;
+//     padding: 10px 10px;
+//     width: 90%;
+//     text-align: center;
+// }
+
+// input#monetaryAmmount,
+// input#taxPercentage {
+//     width: 90%;
+//     text-align: right;
+//     padding: 5px;
+//     margin: 5px 0;
+// }
+
+// #calculateBtn {
+//     width: 100px;
+//     padding: 5px;
+//     margin: 5px 0;
+//     text-align: center;
+// }
+
+// #summary {
+//     background-color: #ccc;
+//     width: 95%;
+//     padding: 2px;
+//     margin: 5px 0;
+// }
+
+// #summary p {
+//     padding: 1px;
+//     margin: 5px 5px;
+// }
+//         </style>
+//     </head>
+// <body>
+
+//     <?php
+//         // Check if the "Calculate" button was pressed, then get the data from inputs
+//         if (isset($_POST['monetaryAmount']) && isset($_POST['taxPercentage'])) {
+//             $monetaryAmmount = (float) $_POST['monetaryAmount'];
+//             $taxPercentage = (float) $_POST['taxPercentage'];
+//         } else {
+//             $monetaryAmmount = 0;
+//             $taxPercentage = 0;
+//         }
+//         // Make the calculations
+//         $taxAmount = round(($monetaryAmmount * $taxPercentage) / 100, 2);
+//         $finalAmount = round($monetaryAmmount - $taxAmount, 2);
     ?>
-
+<!-- 
     <div class="content">
         <h1>Tax Calculator - PHP</h1>
         <form action="" method="POST" id="myForm">
@@ -100,5 +165,5 @@ input#taxPercentage {
             </p>
         </div>
     </div>
-</body>
+</body> -->
 </html>
